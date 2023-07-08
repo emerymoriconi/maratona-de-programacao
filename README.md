@@ -1,3 +1,3 @@
 # exercicios
  
-Resolução da questão 1176 do Beecrowd com programação dinâmica em C++.
+Resolução de questões de plataformas como o Beecrowd para treinar habilidades de programação majoritariamente em Python, C e C++.
