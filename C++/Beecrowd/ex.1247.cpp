@@ -7,8 +7,10 @@ int main(){
     vector<char> resp;
 
     while(cin >> d >> vf >> vg){
+        double v1 = 12/(double)vf;
+        double v2 = (double)(sqrt(pow(d, 2) + pow(12, 2)))/(double)vg;
 
-        if (12/vf >= sqrt(pow(d, 2) + pow(12, 2))/vg){
+        if (v1 >= v2){
             resp.push_back('S');
         } else {
             resp.push_back('N');
