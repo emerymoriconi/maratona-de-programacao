@@ -1,4 +1,5 @@
-# LCS
+# LCS - Complexidade O(n*m) sendo n o tamanho da string1 e m o tamanho da string2
+# Já que a função LCS é chamada recursivamente para todas as combinações possíveis de indices entre n e m
 
 import numpy as np
 
