@@ -3,20 +3,20 @@
 
 import numpy as np
 
-string1 = 'ace'
-string2 = 'abcde'
+string1 = 'art'
+string2 = 'debnm09'
 
 tamanho1 = len(string1)  # linhas
 tamanho2 = len(string2)  # colunas
 
-memo = np.zeros((tamanho1, tamanho2), dtype=int)  # matriz de zeros
+memo = np.full((tamanho1, tamanho2), -1, dtype=int)  # matriz de -1
 path = np.zeros((tamanho1, tamanho2), dtype=int)  # matriz para armazenar o caminho
 
 def LCS(a, b):
     if a == tamanho1 or b == tamanho2:
         return 0
 
-    if memo[a][b] != 0:
+    if memo[a][b] != -1:
         return memo[a][b]
 
     if string1[a] == string2[b]:
@@ -31,11 +31,11 @@ def obter_LCS(a, b):
     if a == tamanho1 or b == tamanho2:
         return ""
 
-    if path[a][b] == 1:
-        return string1[a] + obter_LCS(a + 1, b + 1)
-    elif memo[a + 1][b] > memo[a][b + 1]:
+    if path[a][b] == 1: # verifica se aquela letra faz parte da LCS
+        return string1[a] + obter_LCS(a + 1, b + 1) # concatena a letra pertencente à LCS com os outros caracteres
+    elif a + 1 < tamanho1 and b + 1 < tamanho2 and memo[a + 1][b] > memo[a][b + 1]:
         return obter_LCS(a + 1, b)
-    else:
+    elif b + 1 < tamanho2:
         return obter_LCS(a, b + 1)
 
 comprimento_LCS = LCS(0, 0)
