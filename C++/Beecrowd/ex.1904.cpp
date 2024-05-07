@@ -62,8 +62,8 @@ int count_primos(int x, int y){
     return count;
 }
 
-long long int fatorial (int x) {
-    long long int resp = 1;
+__int128_t fatorial (int x) {
+    __int128_t resp = 1;
     for (int i = 1; i <= x; i++){
         resp *= i;
     }
@@ -73,7 +73,7 @@ long long int fatorial (int x) {
 int main(){
     optimize;
     int A, B, fatores, primos = 0, auxiliar;
-    long long int resposta;
+    __int128_t resposta;
 
     cin >> A >> B;
 
