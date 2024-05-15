@@ -7,6 +7,8 @@ set <int> s; --> usado quando não se pode ter elementos repetidos e a ordem dos
 
 unordered_set <int> s; --> usado quando não se pode ter elementos repetidos e a ordem dos elementos não importa
 
+multiset <int> s; --> usado quando a ordem dos elementos importa. O (logn) para inserir, remover e buscar elementos. Pode ter elementos repetidos.
+
 map <int, int> m; --> usado quando se quer associar um valor a outro valor, como por exemplo, associar um nome a uma idade. O (logn) para inserir, remover e buscar elementos. Chave e valor podem ser de tipos diferentes. A chave não pode ser repetida. A chave é ordenada.
 
 unordered_map <int, int> m; --> usado quando a ordem dos elementos não importa
