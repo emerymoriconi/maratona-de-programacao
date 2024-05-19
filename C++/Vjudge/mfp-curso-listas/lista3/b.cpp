@@ -4,9 +4,9 @@ using namespace std;
 
 int main(){
     int n;
-    vector<int> v;
-    long long int menor = 1e18;
-    long long int maior = -menor;
+    vector<long long int> v;
+    long long int menor = 0;
+    long long int maior = -1e18;
 
     cin >> n;
 
@@ -15,30 +15,18 @@ int main(){
     prefix[0] = 0;
 
     for (int i = 0; i < n; i++){
-        int x;
+        long long int x;
         cin >> x;
         v.push_back(x);
         prefix[i+1] = prefix[i] + x;
     }
 
-    int index_maior, index_menor;
-
     for (int i = 1; i <= n; i++){
-        if (prefix[i] > maior){
-            maior = prefix[i];
-            index_maior = i;
-            
-        }
-        if (prefix[i] < menor){
-            menor = prefix[i];
-            index_menor = i;
-        }
+        maior = max(maior, prefix[i] - menor);
+        menor = min(menor, prefix[i]);
     }
-    if (index_menor < index_maior){
-        cout << maior - menor << endl;
-    } else {
-        cout << maior << endl;
-    }
+    
+    cout << maior;
 
     return 0;
 }
