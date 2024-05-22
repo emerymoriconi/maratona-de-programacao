@@ -1,16 +1,24 @@
 #include <bits/stdc++.h>
- 
+#define optimize ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
+#define endl '\n'
+
+typedef long long ll;
+
+const int MAXN = 1e5 + 10;
+const ll INF = 1e18;
+
 using namespace std;
  
 int main(){
+    optimize;
     int n;
     long long int s;
-    vector<int> v;
+    vector<long long int> v;
 
     cin >> n >> s;
 
     for (int i = 0; i < n; i++){
-        int aux;
+        long long int aux;
         cin >> aux;
         v.push_back(aux);
     }
