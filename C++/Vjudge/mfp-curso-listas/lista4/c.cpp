@@ -22,26 +22,18 @@ int main(){
         times.push_back(a);
     }
 
-    sort(times.begin(), times.end());
-
-    int maior = times[mach-1];
-
-    maior = maior * prod;
-
-    int l = 0, r = maior, resposta;
+    ll l = 0, r = 1e18, resposta = -1;
 
     while (l <= r) {
-        if (l == r) {
-            resposta = l;
-            break;
-        }
-        int mid = (l + r)/2;
-        int soma = 0;
-        for (int x : times){
+        ll mid = l + (r - l)/2;
+        ll soma = 0;
+        for (ll x : times){
             soma += (mid / x);
+            if (soma >= prod) break;
         }
-        if (soma > prod) {
-            r = mid;
+        if (soma >= prod) {
+            r = mid - 1;
+            resposta = mid;
         } else {
             l = mid + 1;
         }
