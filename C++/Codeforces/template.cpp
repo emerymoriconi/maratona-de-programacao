@@ -3,8 +3,6 @@
 #define endl '\n'
 
 typedef long long ll;
-typedef vector<int> vi;
-typedef pair<int, int> pi;
 
 const int MAXN = 1e5 + 10;
 const ll INF = 1e18;
