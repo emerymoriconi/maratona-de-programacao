@@ -12,27 +12,30 @@ using namespace std;
 
 int main(){
     optimize;
-    int n, x, r = 0, l = 0, ans = 0;
-    vector<int> v;
-    vector<int> pref;
+    int n, r = 0, l = 0, ans = 0;
+    ll x;
+    vector<ll> v;
 
     cin >> n >> x;
 
     for (int i = 0; i < n; i++){
-        int a;
+        ll a;
         cin >> a;
         v.push_back(a);
-        if (i == 0) pref.push_back(a);
-        else pref.push_back(a+pref[i-1]);
     }
 
-    while ((l < n) && (r < n)){
-        int sum = (pref[r] - pref[l]) + (pref[l] - pref[0]);
-        if (sum < x) r++;
-        else if (sum > x) l++;
-        else {
+    ll sum = 0;
+
+    for (r = 0; r < n; r++){
+        sum += v[r];
+
+        while (sum > x && l <= r) {
+            sum -= v[l];
+            l++;
+        }
+
+        if (sum == x) {
             ans++;
-            r++;
         }
     }
 
