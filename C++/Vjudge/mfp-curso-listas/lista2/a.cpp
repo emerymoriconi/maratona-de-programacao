@@ -11,7 +11,7 @@ multiset <int> s; --> usado quando a ordem dos elementos importa. O (logn) para 
 
 map <int, int> m; --> usado quando se quer associar um valor a outro valor, como por exemplo, associar um nome a uma idade. O (logn) para inserir, remover e buscar elementos. Chave e valor podem ser de tipos diferentes. A chave não pode ser repetida. A chave é ordenada.
 
-unordered_map <int, int> m; --> usado quando a ordem dos elementos não importa
+unordered_map <int, int> m; --> usado quando a ordem dos elementos não importa. Funciona como uma HASH TABLE. O (1) para inserir, remover e buscar elementos. Chave e valor podem ser de tipos diferentes. A chave não pode ser repetida.
 
 stack <int> s; --> usado quando se quer uma pilha. O (1) para inserir e remover elementos.
 
