@@ -19,7 +19,7 @@ int main(){
     cin >> n;
 
     for (int i = 0; i < n; i++){
-        resp = (resp*2)%M;
+        resp = ((resp%M)*(2%M))%M;
     }
 
     cout << resp << endl;
