@@ -27,7 +27,7 @@ int main(){
         cin >> v[i];
     }
 
-    sort(v.begin(), v.end());
+    sort(v.begin(), v.end()); 
 
     for (int i = 1; i <= m; i++){
         auto it = lower_bound(v.begin(), v.end(), i);

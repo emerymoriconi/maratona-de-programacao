@@ -35,6 +35,7 @@ int main(){
     cin >> n >> m;
     int componente = 0, dest, cons;
 
+    // construindo o grafo
     for (int i = 0; i < m; i++){
         int a, b; cin >> a >> b;
 
